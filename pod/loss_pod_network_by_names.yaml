@@ -1,0 +1,25 @@
+apiVersion: chaosblade.io/v1alpha1
+kind: ChaosBlade
+metadata:
+  name: loss-pod-network-by-names
+spec:
+  experiments:
+  - scope: pod
+    target: network
+    action: loss
+    desc: "loss pod network by names"
+    matchers:
+    - name: names
+      value:
+      - "redis-master-68857cd57c-dzbs9"
+    - name: namespace
+      value:
+      - "chaosblade"
+    - name: interface
+      value: ["eth0"]
+    - name: percent
+      value: ["100"]
+    - name: timeout
+      value: ["60"]
+    - name: destination-ip
+      value: ["10.42.69.42"]

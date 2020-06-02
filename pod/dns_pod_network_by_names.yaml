@@ -1,0 +1,21 @@
+apiVersion: chaosblade.io/v1alpha1
+kind: ChaosBlade
+metadata:
+  name: dns-pod-network-by-names
+spec:
+  experiments:
+  - scope: pod
+    target: network
+    action: dns
+    desc: "dns pod network by names"
+    matchers:
+    - name: names
+      value:
+      - "redis-slave-6dd975d4c8-lm8jz"
+    - name: namespace
+      value:
+      - "chaosblade"
+    - name: domain
+      value: ["www.baidu.com"]
+    - name: ip
+      value: ["10.0.0.1"]

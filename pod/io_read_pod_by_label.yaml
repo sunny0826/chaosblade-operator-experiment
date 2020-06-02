@@ -1,0 +1,32 @@
+apiVersion: chaosblade.io/v1alpha1
+kind: ChaosBlade
+metadata:
+  name: inject-pod-by-labels
+spec:
+  experiments:
+  - scope: pod
+    target: pod
+    action: IO
+    desc: "Pod IO Exception by labels"
+    matchers:
+    - name: labels
+      value:
+      - "app=test"
+    - name: namespace
+      value:
+      - "chaosblade"
+    - name: method
+      value:
+      - "read"
+    - name: delay
+      value:
+      - "1000"
+    - name: path
+      value:
+      - ""
+    - name: percent
+      value:
+      - "60"
+    - name: errno
+      value:
+      - "28"

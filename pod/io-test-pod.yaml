@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: test
+  name: test
+  namespace: chaosblade
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test
+  template:
+    metadata:
+      annotations:
+        chaosblade/inject-volume: data
+        chaosblade/inject-volume-subpath: conf
+      labels:
+        app: test
+    spec:
+      containers:
+      - command: ["/bin/sh", "-c", "while true; do sleep 10000; done"]
+        image: busybox
+        imagePullPolicy: IfNotPresent
+        name: test
+        volumeMounts:
+        - mountPath: /data
+          mountPropagation: HostToContainer
+          name: data
+      volumes:
+      - hostPath:
+          path: /data/fuse
+        name: data
