@@ -2,6 +2,8 @@
 
 >ChaosBlade Operator 实验场景
 
+![](static/ai.png)
+
 **软件要求**
 
 - Kubernetes v1.12 以上
@@ -47,14 +49,19 @@ helm install guestbook apphub-incubator/guestbook --set service.type=NodePort --
 
 ## [Container](container)
 
-- container 内 CPU 负载场景
+- [container 内 CPU 负载场景](container/README.md#container-内CPU负载场景)
 - container 内网络实验场景
-  - container 网络延迟场景
-  - container 网络丢包场景
-  - container 域名访问异常场景
+  - [container 网络延迟场景](container/README.md#container-网络延迟场景)
+  - [container 网络丢包场景](container/README.md#container-网络丢包场景)
+  - [container 域名访问异常场景](container/README.md#container-域名访问异常场景)
 - container 内进程场景
   - 杀 container 内指定进程
   - 挂起 container 内指定进程
 - container 资源自身的场景
-  - 删除 container
+  - [删除 container](container/README.md#删除-container)
   
+## 鸣谢
+
+ChaosBlade 社区 - [chaosblade.io](https://github.com/chaosblade-io/chaosblade)
+
+>更多内容见 [ChaosBlade 官方文档](https://chaosblade-io.gitbook.io/chaosblade-help-zh-cn)

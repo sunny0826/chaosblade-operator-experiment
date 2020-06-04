@@ -1,0 +1,28 @@
+apiVersion: chaosblade.io/v1alpha1
+kind: ChaosBlade
+metadata:
+  name: loss-container-network-by-id
+spec:
+  experiments:
+  - scope: container
+    target: network
+    action: loss
+    desc: "loss container network by container id"
+    matchers:
+    - name: container-ids
+      value:
+      - "02655dfdd9f0f712a10d63fdc6721f4dcee0a390e37717fff068bf3f85abf85e"
+    - name: names
+      value:
+      - "redis-master-68857cd57c-hknb6"
+    - name: namespace
+      value:
+      - "chaosblade"
+    - name: interface
+      value: ["eth0"]
+    - name: percent
+      value: ["100"]
+    - name: timeout
+      value: ["60"]
+    - name: destination-ip
+      value: ["10.42.0.26"]

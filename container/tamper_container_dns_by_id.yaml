@@ -11,12 +11,14 @@ spec:
     matchers:
     - name: container-ids
       value:
-      - "4b25f66580c4"
+      - "02655dfdd9f0f712a10d63fdc6721f4dcee0a390e37717fff068bf3f85abf85e"
     - name: domain
       value: ["www.baidu.com"]
     - name: ip
       value: ["10.0.0.1"]
       # pod names
     - name: names
-      value: ["frontend-d89756ff7-trsxf"]
+      value: ["redis-master-68857cd57c-hknb6"]
       # or use pod labels
+    - name: namespace
+      value: ["chaosblade"]

@@ -11,9 +11,11 @@ spec:
     matchers:
     - name: container-ids
       value:
-      - "2ff814b246f86"
+      - "5ad91eb49c1c6f8357e8d455fd27dad5d0c01c5cc3df36a3acdb1abc75f68a11"
     - name: cpu-percent
       value: ["100"]
       # pod names
     - name: names
-      value: ["frontend-d89756ff7-pbnnc"]
+      value: ["redis-slave-55d8c8ffbd-jd8sm"]
+    - name: namespace
+      value: ["chaosblade"]

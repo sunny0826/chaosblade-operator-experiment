@@ -11,8 +11,10 @@ spec:
     matchers:
     - name: container-ids
       value:
-      - "f1de335b4eeaf"
+      - "f040f331d9cbf3d9dfb268c6d5efdeff3e1060fcca4f61d652c641ed75ee5013"
     - name: process
       value: ["top"]
     - name: names
-      value: ["frontend-d89756ff7-tl4xl"]
+      value: ["guestbook-55645846d9-78x7w"]
+    - name: namespace
+      value: ["chaosblade"]

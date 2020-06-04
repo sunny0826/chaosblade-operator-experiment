@@ -10,9 +10,9 @@ spec:
     desc: "remove container by id"
     matchers:
     - name: container-ids
-      value: ["072aa6bbf2e2e2"]
+      value: ["c6cdcf60b82b854bc4bab64308b466102245259d23e14e449590a8ed816403ed"]
       # pod name
     - name: names
-      value: ["frontend-d89756ff7-szblb"]
+      value: ["guestbook-7b87b7459f-cqkq2"]
     - name: namespace
-      value: ["default"]
+      value: ["chaosblade"]

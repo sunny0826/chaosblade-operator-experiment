@@ -45,11 +45,10 @@ kubectl get pod -l "app=httpbin" -w
 kubectl apply -f delete_pod_by_labels.yaml
 ```
 
-**查看实验结果**
+**查看实验状态**
 
-执行命令：`kubectl get blade delete-two-pod-by-labels -o json`
+执行命令：`kubectl get blade delete-two-pod-by-labels -o json`，查看实验状态：
 
-结果：
 ```json
 {
     "apiVersion": "chaosblade.io/v1alpha1",
@@ -122,6 +121,8 @@ kubectl apply -f delete_pod_by_labels.yaml
     }
 }
 ```
+
+**查看实验结果**
 
 ![delete-pod](../static/delete-pod.gif)
 
@@ -447,13 +448,13 @@ PING 10.42.69.44 (10.42.69.44) 56(84) bytes of data.
 # 响应正常
 ```
 
-![](../static/loss-pod-network.gif)
+![loss-pod-network](../static/loss-pod-network.gif)
 
 这里在配置中还将 `timeout` 设置为 60 秒，60 秒后 100% 丢包的情况将会消失，这个配置是为了防止因丢包率设置太高，造成机器无法连接的情况。与其有相似功能的还有 `exclude-port`，该配置用来指定排除掉的丢包端口。
 
 **停止实验**
 
-执行命令：`kubectl delete -f loss_pod_network_by_names.yaml  `
+执行命令：`kubectl delete -f loss_pod_network_by_names.yaml`
 
 或者直接删除 blade 资源：`kubectl delete blade loss-pod-network-by-names`
 
@@ -576,9 +577,6 @@ $ ping www.baidu.com
 ![dns-pod-network](../static/dns-pod-network.gif)
 
 可以看到 Pod 的 `/etc/hosts` 文件被修改，模拟了 dns 解析异常的场景。
-
-
-
 
 ## Pod 文件相关场景
 
