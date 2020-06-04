@@ -36,12 +36,13 @@ helm install guestbook apphub-incubator/guestbook --set service.type=NodePort --
 
 ## [Pod](pod)
 
-- Pod 资源自身场景
+- [Pod 资源自身场景](pod/README.md#Pod-资源自身场景)
   - [删除 POD](pod/README.md#删除-Pod)
-- Pod 网络相关场
+- [Pod 网络相关场景](pod/README.md#Pod-网络相关场景)
   - [Pod 网络延迟场景](pod/README.md#Pod-网络延迟场景)
   - [Pod 网络丢包场景](pod/README.md#Pod-网络丢包场景)
   - [Pod 域名访问异常场景](pod/README.md#Pod-域名访问异常场景)
+- [Pod 文件相关场景](pod/README.md#Pod-文件相关场景)
   - [Pod 文件系统I/O故障](pod/README.md#Pod-文件系统I/O故障)
 
 ## [Container](container)
