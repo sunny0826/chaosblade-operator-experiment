@@ -21,7 +21,7 @@ helm install guestbook apphub-incubator/guestbook --set service.type=NodePort --
 
 默认的 Service 类型为 `LoadBalancer`，这里为了方便访问设置为了 `NodePort`，访问页面：
 
-![guestbook](static/guestbook.png)
+>![guestbook](static/guestbook.png)
 
 ## [Node](node)
 
