@@ -32,6 +32,9 @@ helm install guestbook apphub-incubator/guestbook --set service.type=NodePort --
   - 节点网络延迟场景
   - 节点网络丢包场景
   - 节点域名访问异常场景
+- 节点磁盘相关场景
+  - 节点磁盘填充场景
+  - 节点磁盘IO读写负载场景
 - 节点进程相关场景
   - 杀节点上指定进程
   - 挂起节点上指定进程

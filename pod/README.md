@@ -578,6 +578,12 @@ $ ping www.baidu.com
 
 可以看到 Pod 的 `/etc/hosts` 文件被修改，模拟了 dns 解析异常的场景。
 
+**停止实验**
+
+执行命令：`kubectl delete -f dns_pod_network_by_names.yaml`
+
+或者直接删除 blade 资源：`kubectl delete blade dns-pod-network-by-names`
+
 ## Pod 文件相关场景
 
 ### Pod 文件系统I/O故障

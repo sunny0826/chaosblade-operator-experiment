@@ -1,0 +1,17 @@
+apiVersion: chaosblade.io/v1alpha1
+kind: ChaosBlade
+metadata:
+  name: burn-node-disk-by-names
+spec:
+  experiments:
+  - scope: node
+    target: disk
+    action: burn
+    desc: "node disk burn"
+    matchers:
+    - name: names
+      value: ["docker20"]
+    - name: read
+      value: ["true"]
+    - name: path
+      value: ["/home"]
