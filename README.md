@@ -37,9 +37,9 @@ ChaosBlade-Operator 启动后将会在每个节点部署一个 `chaosblade-tool`
 
 ```bash
 # add repo
-helm repo add apphub-incubator https://apphub.aliyuncs.com/incubator/
+$ helm repo add apphub-incubator https://apphub.aliyuncs.com/incubator/
 # install 
-helm install guestbook apphub-incubator/guestbook --set service.type=NodePort --namespace=chaosblade
+$ helm install guestbook apphub-incubator/guestbook --set service.type=NodePort --namespace=chaosblade
 ```
 
 默认的 Service 类型为 `LoadBalancer`，这里为了方便访问设置为了 `NodePort`，访问页面：

@@ -8,6 +8,7 @@
   - [Pod 网络延迟场景](delay_pod_network_by_names.yaml)
   - [Pod 网络丢包场景](loss_pod_network_by_names.yaml)
   - [Pod 域名访问异常场景](dns_pod_network_by_names.yaml)
+- Pod 文件相关场景
   - [Pod 文件系统I/O故障](pod_io.yaml)
 
 **参数**
