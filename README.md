@@ -10,9 +10,30 @@
 
 ## 实验准备
 
+### 安装 ChaosBlade Operator
+
+ChaosBlade-Operator 需要使用 Helm 安装，进入 [release 页面](https://github.com/chaosblade-io/chaosblade-operator/releases) 下载安装包（ChaosBlade 还提供了阿里云 OSS 的下载地址，提升国内下载速度）。
+
+使用 Helm 3 安装：
+```bash
+# 下载安装包
+$ wget -qO chaosblade-operator-0.6.0.tgz https://chaosblade.oss-cn-hangzhou.aliyuncs.com/agent/github/0.6.0/chaosblade-operator-0.6.0-v3.tgz
+# 为 chaosblade 创建一个 namespace
+$ kubectl create namespace chaosblade
+# 安装 ChaosBlade-Operator
+$ helm install chaos chaosblade-operator-0.6.0.tgz --set webhook.enable=true --namespace=chaosblade
+# 查看安装结果
+$ kubectl get pod -n chaosblade | grep chaosblade
+chaosblade-operator-6b6b484599-gdgq8   1/1     Running   0          4d23h
+chaosblade-tool-7wtph                  1/1     Running   0          4d20h
+chaosblade-tool-r4zdk                  1/1     Running   0          4d23h
+```
+
+ChaosBlade-Operator 启动后将会在每个节点部署一个 `chaosblade-tool` Pod 和一个 `chaosblade-operator` Pod，如果都运行正常，则安装成功。上面设置 `--set webhook.enable=true` 是为了 Pod 文件系统 I/O 故障实验，如果不需要进行该实验，则无需添加该设置。
+
 本实验使用 [guestbook](https://github.com/cloudnativeapp/guestbook?spm=5176.2020520152.0.0.7c5f16ddH8myx6) 应用。
 
-### 安装
+### 安装 Guestbook
 
 ```bash
 # add repo
