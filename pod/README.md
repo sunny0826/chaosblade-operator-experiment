@@ -768,6 +768,14 @@ sys     0m0.000s
 
 这里只是做了一种类型的实验，更多的实验类型详见[官方文档](https://chaosblade-io.gitbook.io/chaosblade-help-zh-cn/blade-create-k8s/blade-create-k8s-pod-io)。
 
+**停止实验**
+
+执行命令：`kubectl delete -f pod_io.yaml`
+
+或者直接删除 blade 资源：`kubectl delete blade inject-pod-by-labels`
+
+删除测试 pod：`kubectl delete -f io-test-pod.yaml`
+
 #### 附录
 
 **支持的I/O故障方法**
