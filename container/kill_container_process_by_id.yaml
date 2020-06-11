@@ -11,7 +11,7 @@ spec:
     matchers:
     - name: container-ids
       value:
-      - "781d1c377fedb76b3fddd151ee860884990ca3912b55c15f880fac80180cc30b"
+      - "94bc61ac84fb505f3f89b3ce5e4cc804ea8501ed091940b17b0f492835dc57d1"
     - name: process
       value: ["redis-server"]
     - name: names
