@@ -606,8 +606,8 @@ $ ping www.baidu.com
 
 **前提条件**
 
-- 集群中部署了chaosblade-admission-webhook
-- 需要注入故障的volume设置mountPropagation为HostToContainer
+- 集群中部署了 `chaosblade-admission-webhook`
+- 需要注入故障的 `volume` 设置 `mountPropagation为HostToContainer`
 - pod上面添加了如下annotations:
     ```yaml
     chaosblade/inject-volume: "data" //需要注入故障的volume name
@@ -630,6 +630,11 @@ $ kubectl get pod test-7c9fc6fd88-7lx6b -n chaosblade
 NAME                    READY   STATUS    RESTARTS   AGE
 test-7c9fc6fd88-7lx6b   2/2     Running   0          4m8s
 ```
+
+**开始实验**
+
+执行命令，开始实验：
+`kubectl apply -f pod_io.yaml`{{execute}}
 
 **查看实验状态**
 
