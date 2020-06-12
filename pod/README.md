@@ -591,7 +591,7 @@ $ ping www.baidu.com
 
 给 kubernetes 的 pod 注入文件系统I/O故障。
 
->注意：此场景需要激活 `--webhook-enable` 参数，如需使用此功能，请在 chaosblade-operator 参数中添加 `--webhook-enable`，或者在安装时指定，例如 helm 安装时： `--set webhook.enable=true` 指定。
+>注意：此场景需要激活 `--webhook-enable` 参数，如需使用此功能，请在 chaosblade-operator 参数中添加 `--webhook-enable`，或者在安装时指定：例如 helm 安装时添加 `--set webhook.enable=true` 指定。
 
 **实验参数**
 
