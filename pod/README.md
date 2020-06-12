@@ -607,7 +607,7 @@ $ ping www.baidu.com
 **前提条件**
 
 - 集群中部署了 `chaosblade-admission-webhook`
-- 需要注入故障的 `volume` 设置 `mountPropagation为HostToContainer`
+- 需要注入故障的 `volume` 设置 `mountPropagation` 为 `HostToContainer`
 - pod上面添加了如下annotations:
     ```yaml
     chaosblade/inject-volume: "data" //需要注入故障的volume name
