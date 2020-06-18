@@ -20,7 +20,7 @@ Pod 资源均支持以下参数。
 | `namespace` | string | Pod 所属的命名空间 | default |
 | `evict-count` | string | 限制实验生效的数量 | |
 | `evict-percent` | string | 限制实验生效数量的百分比，不包含 % | |
-| `labels` | string | Pod 资源标签，多个标签之前是或的关系 | |
+| `labels` | string | Pod 资源标签，多个标签之间是或的关系 | |
 | `names` | string | Pod 资源名 | |
 | `waiting-time` | string | 实验结果等待时间，参数值要包含单位，例如 10s，1m | 20s |
 
@@ -137,7 +137,7 @@ kubectl apply -f delete_pod_by_labels.yaml
 
 ### Pod 网络延迟场景
 
-对 chaosblade 命名空间中，对 `redis-master-68857cd57c-dzbs9` Pod 的本地 6379 端口添加 3000 毫秒访问延迟，延迟时间上下浮动 1000 毫秒。
+在 chaosblade 命名空间中，对 `redis-master-68857cd57c-dzbs9` Pod 的本地 6379 端口添加 3000 毫秒访问延迟，延迟时间上下浮动 1000 毫秒。
 
 **实验参数**
 
@@ -301,7 +301,7 @@ sys     0m0.001s
 
 ### Pod 网络丢包场景
 
-对 chaosblade 命名空间中，对 `redis-master-68857cd57c-dzbs9` Pod 注入丢包率 100% 的故障，只针对 IP 为 10.42.69.42 的 pod 生效，也就是除 10.42.69.42 以外的 pod 都能正常访问 `redis-master-68857cd57c-dzbs9`。
+在 chaosblade 命名空间中，对 `redis-master-68857cd57c-dzbs9` Pod 注入丢包率 100% 的故障，只针对 IP 为 10.42.69.42 的 pod 生效，也就是除 10.42.69.42 以外的 pod 都能正常访问 `redis-master-68857cd57c-dzbs9`。
 
 **实验参数**
 
@@ -634,7 +634,7 @@ test-7c9fc6fd88-7lx6b   2/2     Running   0          4m8s
 **开始实验**
 
 执行命令，开始实验：
-`kubectl apply -f pod_io.yaml`{{execute}}
+`kubectl apply -f pod_io.yaml`
 
 **查看实验状态**
 

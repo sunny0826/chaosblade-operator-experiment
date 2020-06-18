@@ -23,7 +23,7 @@ Container 资源均支持以下参数。
 | `namespace` | string | Pod 所属的命名空间 | default |
 | `evict-count` | string | 限制实验生效的数量 | |
 | `evict-percent` | string | 限制实验生效数量的百分比，不包含 % | |
-| `labels` | string | Pod 资源标签，多个标签之前是或的关系 | |
+| `labels` | string | Pod 资源标签，多个标签之间是或的关系 | |
 | `names` | string | Pod 资源名 | |
 | `waiting-time` | string | 实验结果等待时间，参数值要包含单位，例如 10s，1m | 20s |
 | `force` |  | 是否强制删除 | |
