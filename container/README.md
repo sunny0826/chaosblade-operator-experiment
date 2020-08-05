@@ -596,7 +596,7 @@ PING 10.42.0.19 (10.42.0.19) 56(84) bytes of data.
 
 **停止实验**
 
-执行命令：`kubectl apply -f loss_container_network_by_id.yaml`
+执行命令：`kubectl delete -f loss_container_network_by_id.yaml`
 
 或者直接删除 blade 资源：`kubectl delete blade loss-container-network-by-id`
 

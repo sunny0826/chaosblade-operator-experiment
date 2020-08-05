@@ -29,7 +29,7 @@ chaosblade-tool-7wtph                  1/1     Running   0          4d20h
 chaosblade-tool-r4zdk                  1/1     Running   0          4d23h
 ```
 
-ChaosBlade-Operator 启动后将会在每个节点部署一个 `chaosblade-tool` Pod 和一个 `chaosblade-operator` Pod，如果都运行正常，则安装成功。上面设置 `--set webhook.enable=true` 是为了 Pod 文件系统 I/O 故障实验，如果不需要进行该实验，则无需添加该设置。
+ChaosBlade-Operator 启动后将会在每个节点部署一个 `chaosblade-tool` Pod 和一个 `chaosblade-operator` Pod，如果都运行正常，则安装成功。上面设置 `--set webhook.enable=true` 是为了进行 Pod 文件系统 I/O 故障实验，如果不需要进行该实验，则无需添加该设置。
 
 ### 安装 Guestbook
 
